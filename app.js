@@ -6,7 +6,7 @@ const minusBtn = document.getElementsByClassName('minus-icon')
 for(let i = 0 ; i < minimize.length ; i++){
     let count = 0
     let clicked = true
-    setInterval(minimize[i].addEventListener('click', function (){
+    minimize[i].addEventListener('click', function (){
         count ++
         if (clicked == true){
             text[i].style.display = "block"
@@ -23,5 +23,5 @@ for(let i = 0 ; i < minimize.length ; i++){
             count = 0
         }
         console.log(count)
-    }),60000)
+    })
 }
