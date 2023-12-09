@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'WorkSans','Bold';
+    src: url(/assets/fonts/static/WorkSans-Bold.ttf);
+}
+@font-face {
+    font-family: 'WorkSans','Regulad';
+    src: url(/assets/fonts/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'WorkSans','SemiBold';
+    src: url(/assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(275, 100%, 97%);
+    font-family: 'WorkSans',sans-serif;
+}
+/* bg img */
+.mobile {
+    display: none;
+}
+.desctop{
+    top: 0;
+    z-index: -1;
+    position: absolute; 
+    width: 100%;
+}
+/* main */
+main{
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+}
+/* typography */
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 15px;
+    margin-right: 30px;
+}
+h2:hover{
+    color: hsl(292, 16%, 49%);
+}
+p{
+    max-width: 30rem;
+    opacity: .5;
+    margin-top: 20px;
+}
+/* img contianer */
+.img-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.img-container img:last-child{
+    display: none;
+}
+.contianer{
+    display: flex;
+    align-items: center;
+}
+.contianer img{
+    margin-right: 20px;
+}
+.minimize-contiiner-text{
+    border-bottom: 1px solid hsl(292, 16%, 49%);
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.minimize-contiiner-text:last-child{
+    border: none;
+    padding: 0;
+}
+.minimize{
+    display: none;
+}
+@media (max-width: 550px) {
+    .desctop {
+        display: none;
+    }
+    .mobile{
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        display: block;
+        top: 0;
+    }
+    body{
+        padding: 20px;
+    }
+}
